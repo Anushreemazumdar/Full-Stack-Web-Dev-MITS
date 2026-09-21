@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 30px;
+    background: white;
+}
+
+.logo-left {
+    width: 90px;
+    height: auto;
+}
+
+.heading {
+    width: 650px;
+    max-width: 70%;
+    height: auto;
+}
+
+.logo-right {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    background: #003366;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ul > li {
+    position: relative;
+}
+
+nav > ul > li > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 22px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+nav > ul > li:hover > a {
+    background: #b22222;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    border-top: 3px solid #b22222;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    display: block;
+    color: black;
+    padding: 12px 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li a:hover {
+    background: #f2f2f2;
+    color: #003366;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Common */
+section {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: #003366;
+    font-size: 32px;
+}
+
+.section-title span,
+.line {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #b22222;
+    margin: 12px auto 0;
+}
+
+/* News */
+.news {
+    background: #f6f6f6;
+}
+
+.news-grid,
+.feature-grid,
+.highlight-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card,
+.feature-card {
+    background: white;
+    padding: 28px;
+    border: 1px solid #ddd;
+    border-top: 4px solid #003366;
+    transition: .3s;
+}
+
+.card:hover,
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.card h3,
+.feature-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card p,
+.feature-card p {
+    color: #555;
+}
+
+/* About */
+.about-preview {
+    background: #003366;
+    color: white;
+}
+
+.about-preview .content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-preview h2 {
+    font-size: 34px;
+}
+
+.about-preview .line {
+    margin: 12px 0 20px;
+    background: white;
+}
+
+.about-preview p {
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 24px;
+    background: #b22222;
+    color: white;
+    font-weight: bold;
+}
+
+/* Academics */
+.academics-preview {
+    background: white;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #b22222;
+    font-weight: bold;
+}
+
+/* Highlights */
+.highlights {
+    background: #f6f6f6;
+}
+
+.highlight-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.highlight-card {
+    padding: 30px;
+    background: #fff;
+    color: #222;
+    border-left: 4px solid #b22222;
+    transition: .3s;
+}
+
+.highlight-card:hover {
+    background: #003366;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.highlight-card h3 {
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.highlight-card:hover h3 {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #00264d;
+    color: white;
+}
+
+.footer-grid {
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 7%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-grid h3 {
+    margin-bottom: 15px;
+}
+
+.footer-grid p {
+    color: #cbd5df;
+}
+
+.footer-grid a {
+    display: block;
+    color: #cbd5df;
+    margin-bottom: 8px;
+}
+
+.footer-grid a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,.15);
+    color: #cbd5df;
+    font-size: 13px;
+}
+
+/* Inner pages */
+.page-banner {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.page-banner h1 {
+    font-size: 40px;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 7%;
+}
+
+.page-content h2 {
+    color: #003366;
+    margin: 35px 0 12px;
+}
+
+.page-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-card {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-top: 4px solid #003366;
+}
+
+.info-card h3 {
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .header {
+        padding: 15px;
+    }
+
+    .heading {
+        width: 500px;
+    }
+
+    nav > ul > li > a {
+        padding: 13px 10px;
+        font-size: 14px;
+    }
+
+    .news-grid,
+    .feature-grid,
+    .highlight-grid,
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .heading {
+        max-width: 95%;
+        width: 500px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+    }
+
+    nav > ul > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .news-grid,
+    .feature-grid,
+    .highlight-grid,
+    .info-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
